@@ -2,6 +2,8 @@
 
 Análisis de EPA Fuel Economy, año modelo 2025.
 
+El desarrollo se realiza en la rama `prueba`. La rama `main` se reserva para la entrega final.
+
 ## Organización
 
 ```text
@@ -27,7 +29,7 @@ Entorno comprobado: Python 3.12, macOS con Apple Silicon. Se recomienda Python 3
 Desde una terminal, clonar y entrar al repositorio:
 
 ```bash
-git clone https://github.com/rodrigo1git/TPE-Fundamentos-de-Ciencia-de-Datos.git
+git clone --branch prueba https://github.com/rodrigo1git/TPE-Fundamentos-de-Ciencia-de-Datos.git
 cd TPE-Fundamentos-de-Ciencia-de-Datos
 ```
 
@@ -68,7 +70,7 @@ Para publicar un avance revisado, desde la raíz del proyecto:
 git status
 git add README.md .gitignore TPE.ipynb informe.md data docs requirements.in requirements.txt scripts
 git commit -m "Actualizar trabajo práctico"
-git push origin main
+git push origin prueba
 ```
 
 El usuario que publica debe tener permiso de escritura en el repositorio.
