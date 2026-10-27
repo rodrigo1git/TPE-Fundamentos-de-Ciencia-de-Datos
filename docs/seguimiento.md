@@ -4,12 +4,30 @@
 
 | Inciso | Contenido | Estado |
 | --- | --- | --- |
-| 1 | Análisis exploratorio inicial | Desarrollado |
+| 1 | Análisis exploratorio inicial | Desarrollado; sección 1.4 ampliada con búsqueda de representaciones alternativas de faltantes |
 | 2 | Limpieza y justificación de las acciones | Código implementado y verificado; borrador de explicaciones agregado, pendiente de validación del grupo |
 | 3 | Hipótesis propias: univariada, bivariada y multivariada | Pendiente |
 | 4 | Validación de las seis hipótesis | Pendiente |
 
 La notebook y el informe usan las mismas secciones. Las secciones pendientes se mantienen identificadas durante el desarrollo y deben completarse antes de la entrega.
+
+## Ampliación del inciso 1.4: otras representaciones de faltantes
+
+Se amplía la exploración siguiendo el trabajo con `value_counts()` de la práctica 4: además de contar `NaN`, se examinan valores repetidos y posibles marcas alternativas de ausencia. Esta revisión describe los datos y no modifica la limpieza aprobada.
+
+Se comprobaron **51.153 celdas vacías en el Excel**, coincidentes con el total de `NaN` de la lectura habitual. No se encontraron coincidencias con otras marcas textuales buscadas, como `na`, `n/a`, `nan`, `null` o `unknown`. Este resultado se limita a las marcas revisadas: no demuestra que todos los valores numéricos tengan un significado válido ni descarta otras convenciones no documentadas.
+
+Se identificaron los siguientes casos para revisar:
+
+| Variable o grupo | Observación | Estado |
+| --- | --- | --- |
+| `PM (g/mi)` | 15 valores iguales a 9999.9999999 | Nuevo candidato a valor especial o inconsistencia; no se confirmó que represente ausencia. |
+| Tres calificaciones DT | El valor −1 aparece 5, 6 y 2 veces en las tres columnas; también existen otros valores negativos. | Pendiente de interpretación; el signo negativo no basta para clasificarlo como faltante. |
+| `Set Coef A (lbf)` | 4 valores iguales a 99.999 | Pendiente de interpretación; no se aplica a esta columna el criterio utilizado para cilindrada. |
+| `Test Veh Displacement (L)` | 95 valores iguales a 99.999 | Caso ya identificado en el análisis anterior. |
+| `RND_ADJ_FE` | 8 valores iguales al máximo 9999.9999999 | Caso ya identificado en el análisis anterior. |
+
+Los nuevos candidatos **no se reemplazan por `NaN` ni se incorporan a las reglas del inciso 2**. Tampoco se interpreta automáticamente un valor como ausente por coincidir numéricamente con uno seleccionado en otra variable. El tratamiento de cilindrada y economía previamente aprobado se conserva; la nueva búsqueda deja pendientes de revisión los valores de PM, DT y coeficiente A.
 
 ## Inciso 2: implementación aprobada
 
@@ -62,6 +80,8 @@ La ejecución completa finalizó correctamente. Se conservaron **4.287 filas, 1.
 Las 80 conversiones de economía incluyen los 12 casos específicos y los **68 índices del criterio del boxplot**. En total se modificaron **183 celdas en 183 filas distintas**. Se comprobó que el Excel original permanece intacto y que todas las demás columnas conservadas mantienen sus valores.
 
 ## Próximos pasos
+
+- Revisar el significado de los nuevos candidatos de PM, calificaciones DT y coeficiente A antes de proponer cambios adicionales.
 
 - Revisar y validar en grupo las explicaciones agregadas al inciso 2.
 - Completar la justificación académica final de la limpieza y su desarrollo en el informe.
