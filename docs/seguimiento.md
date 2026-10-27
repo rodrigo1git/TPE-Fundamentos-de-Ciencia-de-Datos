@@ -5,7 +5,7 @@
 | Inciso | Contenido | Estado |
 | --- | --- | --- |
 | 1 | Análisis exploratorio inicial | Desarrollado |
-| 2 | Limpieza y justificación de las acciones | Código implementado; justificación y redacción final pendientes |
+| 2 | Limpieza y justificación de las acciones | Código implementado y verificado; borrador de explicaciones agregado, pendiente de validación del grupo |
 | 3 | Hipótesis propias: univariada, bivariada y multivariada | Pendiente |
 | 4 | Validación de las seis hipótesis | Pendiente |
 
@@ -13,7 +13,18 @@ La notebook y el informe usan las mismas secciones. Las secciones pendientes se 
 
 ## Inciso 2: implementación aprobada
 
-La limpieza se realiza sobre una copia de trabajo. El Excel de origen y el DataFrame original se conservan sin modificaciones. La notebook incorpora el código operacional; los integrantes del grupo redactarán las explicaciones académicas y la justificación de las decisiones en la notebook y el informe.
+La limpieza se realiza sobre una copia de trabajo. El Excel de origen y el DataFrame original se conservan sin modificaciones. La notebook incorpora el código operacional y un borrador de explicaciones breves antes de cada uno de los cuatro bloques del inciso 2. El grupo deberá revisar esas explicaciones y completar la justificación académica final y su desarrollo en el informe.
+
+### Borrador de explicaciones por bloque
+
+A pedido del usuario, se agregaron cuatro textos Markdown breves y concretos para explicar qué hace cada bloque de código:
+
+1. Crear una copia y seleccionar las columnas que se conservan.
+2. Comprobar las filas, las configuraciones y los números de ensayo.
+3. Reemplazar por `NaN` los valores seleccionados, incluyendo los 68 candidatos del diagrama de caja, sin presentarlos como errores confirmados.
+4. Comparar las dimensiones y los valores faltantes antes y después.
+
+Estas explicaciones acompañan el código existente; no cambian sus operaciones ni el análisis del inciso 1. Son un **borrador pendiente de validación del grupo** y no dan por finalizada la justificación académica de la limpieza.
 
 ### Selección de columnas
 
@@ -52,7 +63,8 @@ Las 80 conversiones de economía incluyen los 12 casos específicos y los **68 �
 
 ## Próximos pasos
 
-- Redactar y justificar las acciones del inciso 2 en la notebook y el informe.
+- Revisar y validar en grupo las explicaciones agregadas al inciso 2.
+- Completar la justificación académica final de la limpieza y su desarrollo en el informe.
 - Definir la unidad de análisis y la selección de ensayos para cada hipótesis.
 - Formular las tres hipótesis propias y desarrollar las seis validaciones.
 
