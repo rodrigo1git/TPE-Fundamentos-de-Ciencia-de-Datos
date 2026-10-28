@@ -5,7 +5,7 @@
 | Inciso | Contenido | Estado |
 | --- | --- | --- |
 | 1 | Análisis exploratorio inicial | Desarrollado; sección 1.4 ampliada con búsqueda de representaciones alternativas de faltantes |
-| 2 | Limpieza y justificación de las acciones | Código implementado y verificado; borrador de explicaciones agregado, pendiente de validación del grupo |
+| 2 | Limpieza y justificación de las acciones | Tres bloques de código y conclusión escrita en 2.4; explicaciones y conclusión pendientes de revisión del grupo |
 | 3 | Hipótesis propias: univariada, bivariada y multivariada | Pendiente |
 | 4 | Validación de las seis hipótesis | Pendiente |
 
@@ -31,18 +31,19 @@ Los nuevos candidatos **no se reemplazan por `NaN` ni se incorporan a las reglas
 
 ## Inciso 2: implementación aprobada
 
-La limpieza se realiza sobre una copia de trabajo. El Excel de origen y el DataFrame original se conservan sin modificaciones. La notebook incorpora el código operacional y un borrador de explicaciones breves antes de cada uno de los cuatro bloques del inciso 2. El grupo deberá revisar esas explicaciones y completar la justificación académica final y su desarrollo en el informe.
+La limpieza se realiza sobre una copia de trabajo. El Excel de origen y el DataFrame original se conservan sin modificaciones. La notebook conserva tres bloques operacionales en las secciones 2.1 a 2.3, acompañados por explicaciones breves. La sección 2.4 contiene únicamente una conclusión escrita: se retiró el bloque de código de resumen, sin cambiar las operaciones de limpieza anteriores. El grupo deberá revisar las explicaciones y la conclusión, y completar la justificación académica final y su desarrollo en el informe.
 
-### Borrador de explicaciones por bloque
+### Explicaciones y conclusión del inciso 2
 
-A pedido del usuario, se agregaron cuatro textos Markdown breves y concretos para explicar qué hace cada bloque de código:
+Los tres bloques de código realizan las siguientes operaciones:
 
-1. Crear una copia y seleccionar las columnas que se conservan.
-2. Comprobar las filas, las configuraciones y los números de ensayo.
-3. Reemplazar por `NaN` los valores seleccionados, incluyendo los 68 candidatos del diagrama de caja, sin presentarlos como errores confirmados.
-4. Comparar las dimensiones y los valores faltantes antes y después.
+1. **2.1:** crear una copia y seleccionar las columnas que se conservan.
+2. **2.2:** comprobar las filas, las configuraciones y los números de ensayo.
+3. **2.3:** reemplazar por `NaN` los valores seleccionados, incluyendo los 68 candidatos del diagrama de caja, sin presentarlos como errores confirmados.
 
-Estas explicaciones acompañan el código existente; no cambian sus operaciones ni el análisis del inciso 1. Son un **borrador pendiente de validación del grupo** y no dan por finalizada la justificación académica de la limpieza.
+La sección **2.4** reúne la conclusión escrita: la copia mantiene **4.287 filas y 57 columnas**, con **183 reemplazos por `NaN`** —95 de cilindrada, 8 de potencia y 80 de economía—. No incluye un cuarto bloque operacional ni una tabla de resumen generada por código.
+
+Las explicaciones y la conclusión son un **borrador pendiente de revisión del grupo**. La retirada del código de resumen no modifica los reemplazos de la sección 2.3 ni las decisiones aprobadas; tampoco da por finalizada su justificación académica.
 
 ### Selección de columnas
 
@@ -82,8 +83,7 @@ Las 80 conversiones de economía incluyen los 12 casos específicos y los **68 �
 ## Próximos pasos
 
 - Revisar el significado de los nuevos candidatos de PM, calificaciones DT y coeficiente A antes de proponer cambios adicionales.
-
-- Revisar y validar en grupo las explicaciones agregadas al inciso 2.
+- Revisar y validar en grupo las explicaciones de 2.1 a 2.3 y la conclusión escrita de 2.4.
 - Completar la justificación académica final de la limpieza y su desarrollo en el informe.
 - Definir la unidad de análisis y la selección de ensayos para cada hipótesis.
 - Formular las tres hipótesis propias y desarrollar las seis validaciones.
